@@ -236,7 +236,6 @@ main .form form .wizard > legend{
 main .form form fieldset.checkbox-group-wrapper,
 main .form form fieldset.radio-group-wrapper {
     padding-left: 0;
-    margin-left:0;
     margin: var(--form-field-gap)
 }
 
