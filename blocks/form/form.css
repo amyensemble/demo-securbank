@@ -3,7 +3,7 @@
     --label-color: #666;
     --border-color: #818a91;
     --form-error-color: #ff5f3f;
-    --button-primary-color: #5F8DDA;
+    --button-primary-color: #0096A6;
     --button-secondary-color: #666;
     --button-primary-hover-color: #035fe6;
     --form-font-size-m: 22px;
@@ -13,9 +13,9 @@
     --form-padding: 0 10px;
     --form-columns: 12;
     --form-field-horz-gap: 40px;
-    --form-field-vert-gap: 20px;
+    --form-field-vert-gap: 5px;
     --form-invalid-border-color: #ff5f3f;
-    --form-input-padding: 0.75rem 0.6rem;
+    --form-input-padding: 0.3rem 0.6rem;
     --form-input-font-size: 1rem;
     --form-input-disable-color: #ebebe4;
     --form-input-border-size: 1px;
@@ -56,7 +56,7 @@
     --form-wizard-padding-bottom: 160px;
     --form-wizard-step-legend-padding: 10px;
     --form-wizard-step-legend-font-size: 1.1rem;
-    --form-field-gap: 5px;
+    --form-field-gap: 0px;
     
     /* Card styling variables */
     --form-card-border-color: #e0e0e0;
@@ -121,7 +121,12 @@ main .form form fieldset fieldset {
 
 main .form .field-description {
     color: var(--form-label-color);
-    font-size: var(--form-font-size-xs);
+    font-size: var(--form-font-size-xxs);
+}
+
+main .form .field-description p {
+    color: var(--form-label-color);
+    font-size: 14px;
 }
 
 main .form form .field-invalid .field-description {
@@ -232,6 +237,7 @@ main .form form fieldset.checkbox-group-wrapper,
 main .form form fieldset.radio-group-wrapper {
     padding-left: 0;
     margin-left:0;
+    margin: var(--form-field-gap)
 }
 
 main .form form fieldset.checkbox-group-wrapper > legend,
@@ -248,7 +254,7 @@ main .form label.required::after {
 main .form form p,
 main .form form .repeat-wrapper,
 main .form form .field-wrapper {
-    margin: var(--form-field-gap);
+    margin-bottom: 10px;
     color: var(--form-label-color);
     grid-column: span 12;
 }
@@ -286,7 +292,7 @@ main .form form fieldset.cards {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 main .form form fieldset.cards > .radio-wrapper,
